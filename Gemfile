@@ -7,3 +7,12 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 
 gem "rspec", "~> 3.10"
+
+gem "colorize", "~> 0.8.1"
+
+gem "tty", "~> 0.5.0"
+gem "prompt", "~> 1.2"
+
+gem "tty-prompt", "~> 0.6.0"
+
+gem "artii", "~> 2.1"
