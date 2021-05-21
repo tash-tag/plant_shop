@@ -15,26 +15,29 @@ def validate_name(name)
  raise ArgumentError, "Name must not be empty" if name.empty?
  name
 end
-#ask user for plant requirements.
 
+#ask user for plant requirements.
+# def 
 # questions = ["Question 1", "Question 2", "Question 3"]
 # answers = []
 # questions.each do |question|
 #   puts question
 #   answers << gets.strip
 #  end
-
-# def questions
-# puts "What size plant do you want?"
-#  puts ">"
-# answers[0] = gets.chomp
-# puts "Do you want easy or challenging?"
-# puts ">"
-# answers[1] = gets.chomp
-# puts "do you want high light or low light?"
-# puts ">"
-# answers[2] = gets.chomp
 # end
+
+
+def questions
+puts "What size plant do you want?"
+ puts ">"
+answers[0] = gets.chomp
+puts "Do you want easy or challenging?"
+puts ">"
+answers[1] = gets.chomp
+puts "do you want high light or low light?"
+puts ">"
+answers[2] = gets.chomp
+end
 
 
 #--------------------------------------------
@@ -43,7 +46,7 @@ end
 system 'clear'
 welcome
 
-# questions
+questions
 
 # answers[]
 
