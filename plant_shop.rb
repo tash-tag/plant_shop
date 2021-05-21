@@ -5,9 +5,16 @@ puts "Welcome to the indoor plant shop"
 puts "What is your name?"
 print ">"
 name = gets.chomp()
+validate_name(name)
 puts ("Hello " + name + ", please answer some questions to find your perfect plant match.")
 end
 
+#specify an exception type
+def validate_name(name)
+ name = name.strip 
+ raise ArgumentError, "Name must not be empty" if name.empty?
+ name
+end
 #ask user for plant requirements.
 
 # questions = ["Question 1", "Question 2", "Question 3"]
@@ -17,26 +24,28 @@ end
 #   answers << gets.strip
 #  end
 
-def questions
-puts "What size plant do you want?"
- puts ">"
-answers[0] = gets.chomp
-puts "Do you want easy or challenging?"
-puts ">"
-answers[1] = gets.chomp
-puts "do you want high light or low light?"
-puts ">"
-answers[2] = gets.chomp
-end
+# def questions
+# puts "What size plant do you want?"
+#  puts ">"
+# answers[0] = gets.chomp
+# puts "Do you want easy or challenging?"
+# puts ">"
+# answers[1] = gets.chomp
+# puts "do you want high light or low light?"
+# puts ">"
+# answers[2] = gets.chomp
+# end
+
+
 #--------------------------------------------
 #start of program
 #--------------------------------------------
 system 'clear'
 welcome
 
-questions
+# questions
 
-answers[]
+# answers[]
 
 # name = gets.strip.downcase
 
