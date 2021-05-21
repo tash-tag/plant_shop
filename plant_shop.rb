@@ -1,7 +1,9 @@
 #When the program starts there will be a welcome message and it will ask for users name.
-require_relative 'plant_size'
+require_relative 'plant_specks'
+
+
 def welcome
-puts "Welcome to the indoor plant shop"
+puts "Welcome to the indoor plant shop, the best indoor plant shop for coders."
 puts "What is your name?"
 print ">"
 name = gets.chomp()
@@ -48,7 +50,7 @@ welcome
 
 questions
 
-# answers[]
+answers[]
 
 # name = gets.strip.downcase
 
