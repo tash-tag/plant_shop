@@ -3,7 +3,7 @@ require_relative 'plant_specks'
 
 
 def welcome
-puts "Welcome to the indoor plant shop, the best indoor plant shop for coders."
+puts "Welcome to the indoor plant shop."
 puts "What is your name?"
 print ">"
 name = gets.chomp()
@@ -36,7 +36,7 @@ answers[0] = gets.chomp
 puts "Do you want easy or challenging?"
 puts ">"
 answers[1] = gets.chomp
-puts "do you want high light or low light?"
+puts "Do you want a plant for high light or low light?"
 puts ">"
 answers[2] = gets.chomp
 end
@@ -48,6 +48,8 @@ end
 system 'clear'
 welcome
 
+validate_name
+
 questions
 
 answers[]
@@ -56,6 +58,7 @@ answers[]
 
 # todo = PlantSize.new(name)
 
+# loop do plant_specks
 # case gets.to_i
 # when 1 
 #  todo.size
