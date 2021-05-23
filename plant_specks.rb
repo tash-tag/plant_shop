@@ -19,7 +19,7 @@ class PlantSpecks(name)
   file.close
   end #if exist
  end
-
+,
 def easy
  puts "Do you want a ({1}easy) or ({2}challenging) plant?"
 end

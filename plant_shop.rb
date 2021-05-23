@@ -14,7 +14,8 @@ end
 #specify an exception type
 def validate_name(name)
  name = name.strip 
- raise ArgumentError, "Name must not be empty" if name.empty?
+ raise ArgumentError, "Name must not be empty" 
+ if name.empty?
  name
 end
 
