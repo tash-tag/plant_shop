@@ -1,21 +1,21 @@
 #When the program starts there will be a welcome message and it will ask for users name.
 require_relative 'plant_specks'
-
+require_relative 'plant_list'
 
 def welcome
-puts "Welcome to the indoor plant shop."
-puts "What is your name?"
-print ">"
-name = gets.chomp()
-validate_name(name)
-puts ("Hello " + name + ", please answer some questions to find your perfect plant match.")
+ puts "Welcome to the indoor plant shop."
+ puts "What is your name?"
+ print ">"
+ user_name = gets.chomp()
+ validate_name(user_name)
+ puts ("Hello " + user_name + ", please answer some questions to find your perfect plant match.")
+ user_name
 end
 
 #specify an exception type
 def validate_name(name)
  name = name.strip 
- raise ArgumentError, "Name must not be empty" 
- if name.empty?
+ raise ArgumentError, "Name must not be empty" if name.empty?
  name
 end
 
@@ -30,16 +30,16 @@ end
 # end
 
 
-def questions
-puts "What size plant do you want?"
+def questions(plant_selection)
+puts "What size plant do you want, small, medium or large?"
  puts ">"
-answers[0] = gets.chomp
+ plant_selection.answers[0] = gets.chomp
 puts "Do you want easy or challenging?"
 puts ">"
-answers[1] = gets.chomp
+plant_selection.answers[1] = gets.chomp
 puts "Do you want a plant for high light or low light?"
 puts ">"
-answers[2] = gets.chomp
+plant_selection.answers[2] = gets.chomp
 end
 
 
@@ -47,13 +47,16 @@ end
 #start of program
 #--------------------------------------------
 system 'clear'
-welcome
 
-validate_name
+name = welcome
 
-questions
+plant_selection = PlantSpecks.new(name)
 
-answers[]
+# validate_name
+
+questions(plant_selection)
+pp plant_selection.answers
+
 
 # name = gets.strip.downcase
 

@@ -22,7 +22,7 @@ describe "PlantSpecks" do
 
 #test it creates a new file
  end
- it 'should create a new file'do
+ it 'should create a new file' do
   @plant_shop.size
   expect(File.exist?('./PlantSpecks/new_user.txt')).to be true
 end

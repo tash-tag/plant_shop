@@ -1,7 +1,11 @@
-class PlantSpecks(name)
- def initialize
+
+
+class PlantSpecks
+ attr_accessor :answers
+ def initialize(name)
   @name = name
   @file_path = "./PlantSpecks/#{name}.txt"
+  @answers = []
  end
 
  def size
@@ -19,7 +23,7 @@ class PlantSpecks(name)
   file.close
   end #if exist
  end
-,
+
 def easy
  puts "Do you want a ({1}easy) or ({2}challenging) plant?"
 end
@@ -28,4 +32,7 @@ def light
  puts "Do you want a low light or high light plant?"
 end
 
+# calling a plant selection to print to user
+def plant_suggest 
+plant_choice
 end
