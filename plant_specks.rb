@@ -24,20 +24,15 @@ class PlantSpecks
   end #if exist
  end
 
-def easy
- puts "Do you want a ({1}easy) or ({2}challenging) plant?"
-end
 
-def light
- puts "Do you want a low light or high light plant?"
-end
 
 # calling a plant selection to print to user
 
 def plant_suggest 
 object = Plantlist.new
 # answers = object.plant_choice
-@plant_choice[1].select {|key| key == care }
+pp object.plant_choice.select {|hash| (hash.values & answers) == answers}
+
 end
 
 end

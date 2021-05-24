@@ -6,8 +6,8 @@
 # storing plant details
 
 class Plantlist 
-
-def initialize (plant_choice)
+attr_reader :plant_choice 
+def initialize
 
  @plant_choice = [{:size  => "small", :care => "easy", :light => "low", :plant_name => "Sansevera spp / Snake Plant", :price => "$25"}, 
 {:size => "small", :care => "challenging", :light => "low", :plant_name => "Adiantum raddianum / Maidenhair fern", :price => "$18"},

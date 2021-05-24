@@ -59,7 +59,8 @@ plant_selection = PlantSpecks.new(name)
 # validate_name
 
 questions(plant_selection)
-# pp plant_selection.answers
+
+plant_selection.plant_suggest
 
 
 # name = gets.strip.downcase
