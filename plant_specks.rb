@@ -24,13 +24,10 @@ class PlantSpecks
   end #if exist
  end
 
-
-
 # calling a plant selection to print to user
 
 def plant_suggest 
 object = Plantlist.new
-# answers = object.plant_choice
 pp object.plant_choice.select {|hash| (hash.values & answers) == answers}
 
 end

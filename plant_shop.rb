@@ -23,16 +23,6 @@ def validate_name(name)
  name
 end
 
-#ask user for plant requirements.
-# def 
-# questions = ["Question 1", "Question 2", "Question 3"]
-# answers = []
-# questions.each do |question|
-#   puts question
-#   answers << gets.strip
-#  end
-# end
-
 
 def questions(plant_selection)
 puts "What size plant do you want, small, medium or large?"
@@ -79,6 +69,3 @@ plant_selection.plant_suggest
 #  exit
 # end
 
-# question [0] "Do you want a ({1}small), ({2}medium), ({3}large) plant?"
-# question [1] "Do you want a ({1}easy) or ({2}challenging) plant?"
-# question [2] "Do you want a low light or high light plant?"
