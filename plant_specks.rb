@@ -33,6 +33,11 @@ def light
 end
 
 # calling a plant selection to print to user
+
 def plant_suggest 
-plant_choice
+object = Plantlist.new
+answers = object.plant_choice.key() 
+
+end
+
 end

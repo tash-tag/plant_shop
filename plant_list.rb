@@ -8,10 +8,11 @@
 
 # storing plant details
 
-plant_choice = [{:size  => "small", :care => "easy", :light => "low", :plant_name => "Sansevera spp / Snake Plant", :price => "$25"}, 
+Class Plants 
+def initialize plant_choice = [{:size  => "small", :care => "easy", :light => "low", :plant_name => "Sansevera spp / Snake Plant", :price => "$25"}, 
 {:size => "small", :care => "challenging", :light => "low", :plant_name => "Adiantum raddianum / Maidenhair fern", :price => "$18"},
 {:size => "small", :care => "easy", :light => "high", :plant_name => "Epipremnum aureum / Devil's Ivy", :price => "$18"},
-{:size => "small", :care => "challenging", :light => "high", :plant_name => "Calathea spp / Calathea" :price => "$25"},
+{:size => "small", :care => "challenging", :light => "high", :plant_name => "Calathea spp / Calathea", :price => "$25"},
 {:size => "medium", :care => "easy", :light => "low", :plant_name => "Monstera deliciosa / Swiss Cheese Plant", :price => "$30"},
 {:size => "medium", :care => "challenging", :light => "low", :plant_name => "Zanzibar Gem / Zuzu plant", :price => "$40"},
 {:size => "medium", :care => "easy", :light => "high", :plant_name => "Philodendron Xanandu / Xanandu", :price => "$35"},
@@ -21,3 +22,4 @@ plant_choice = [{:size  => "small", :care => "easy", :light => "low", :plant_nam
 {:size => "large", :care => "easy", :light => "high", :plant_name => "Dypsis lutescence / Golden Cane Palm", :price => "$60"},
 {:size => "large", :care => "challenging", :light => "high", :plant_name => "Ficus lyrata / Fiddle Leaf Fig", :price => "$55"}]
 
+end

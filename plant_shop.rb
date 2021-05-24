@@ -32,13 +32,13 @@ end
 
 def questions(plant_selection)
 puts "What size plant do you want, small, medium or large?"
- puts ">"
+ print ">"
  plant_selection.answers[0] = gets.chomp
 puts "Do you want easy or challenging?"
-puts ">"
+print ">"
 plant_selection.answers[1] = gets.chomp
 puts "Do you want a plant for high light or low light?"
-puts ">"
+print ">"
 plant_selection.answers[2] = gets.chomp
 end
 
