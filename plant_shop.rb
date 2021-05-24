@@ -1,9 +1,13 @@
 #When the program starts there will be a welcome message and it will ask for users name.
 require_relative 'plant_specks'
 require_relative 'plant_list'
+require 'colorize'
+require 'rspec'
+require 'tty-prompt'
+require 'artii'
 
 def welcome
- puts "Welcome to the indoor plant shop."
+ puts "Welcome to the indoor plant shop.".colorize(:yellow)
  puts "What is your name?"
  print ">"
  user_name = gets.chomp()
@@ -55,7 +59,7 @@ plant_selection = PlantSpecks.new(name)
 # validate_name
 
 questions(plant_selection)
-pp plant_selection.answers
+# pp plant_selection.answers
 
 
 # name = gets.strip.downcase

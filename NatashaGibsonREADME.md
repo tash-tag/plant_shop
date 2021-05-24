@@ -1,2 +1,1 @@
-# plant_shop
-Terminal project
+T1A3 Terminal project

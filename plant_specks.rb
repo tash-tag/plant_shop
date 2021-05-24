@@ -36,8 +36,8 @@ end
 
 def plant_suggest 
 object = Plantlist.new
-answers = object.plant_choice.key() 
-
+# answers = object.plant_choice
+@plant_choice[1].select {|key| key == care }
 end
 
 end
