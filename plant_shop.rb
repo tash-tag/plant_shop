@@ -12,8 +12,8 @@ require 'artii'
 
 #When the program starts there will be a welcome message and it will ask for users name.
 def welcome
- puts "Welcome to the indoor plant shop.".colorize(:yellow)
- puts "What is your name?"
+ puts "Welcome to the indoor plant shop."
+ puts "What is your name?".colorize(:yellow)
  print ">"
  user_name = gets.chomp()
  validate_name(user_name)
@@ -22,23 +22,31 @@ def welcome
 end
 
 #raise an argument error
-# begin
+
  def validate_name(name)
   begin
    name = name.strip #trim whitespace 
-   raise ArgumentError.new "Name must not be empty" 
+   raise ArgumentError.new "Name must not be empty"if name.empty?
   rescue ArgumentError => e
-   puts e "
-  if name.empty?
+   puts e 
    print "Enter valid name:"
    name = gets.chomp
   end
  end
+# end
  
+#asking the user what they want to do first 
+def menu(decision)
+ puts "Please select from the following list:"
+ puts "1. Start with the plant enquiry?" 
+ puts "2. Print a copy of all of the plants and their prices?"
+ puts "3. Exit"
+ puts
+ print ">"
+end
 
 
-
-
+#ask the user for info on their plant choices
 def questions(plant_selection)
  puts "What size plant do you want, small, medium or large?"
  print ">"
@@ -53,6 +61,9 @@ end
 
 
 
+
+
+
 #--------------------------------------------
 #start of program
 #--------------------------------------------
@@ -60,17 +71,28 @@ system 'clear'
 
 name = welcome
 
+menu
 
-
-# menu
+case gets.to_i
+when 1
+ puts "Start with the plant enquiry?"
+when 2
+ puts "Print a copy of all of the plants and their prices?"
+when 3
+ puts "Quit"
+end
 
 plant_selection = PlantSpecks.new(name)
-
-# validate_name
 
 questions(plant_selection)
 
 plant_selection.plant_suggest
+
+plant_print = Plantlist.new
+
+plant_choice.plant_print
+
+
 
 
 # name = gets.strip.downcase
