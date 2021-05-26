@@ -1,9 +1,6 @@
 #!/bin/bash
 
-echo "Hello, welcome to Plant Shop"
-echo "Please type the file name to start pogram"
-read PLANT
-PLANT_PATH="./plants/$PLANT"
-echo "$PLANT_PATH"
+echo "Hello, welcome to the Indoor Plant Shop"
+echo "Let us pick the perfect plant for you"
 
-ruby plant_shop.rb -path $PLANT_PATH
+ruby plant_shop.rb

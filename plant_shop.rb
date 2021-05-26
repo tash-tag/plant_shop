@@ -33,17 +33,11 @@ end
    print "Enter valid name:"
    name = gets.chomp
   end
-  end
  end
+ 
 
 
 
-
-# begin
-#  welcome
-# rescue => 
-#  puts e."Name must not be empty"
-# end
 
 def questions(plant_selection)
  puts "What size plant do you want, small, medium or large?"
@@ -55,7 +49,6 @@ def questions(plant_selection)
  puts "Do you want a plant for high light or low light?"
  print ">"
  plant_selection.answers[2]= gets.chomp
- 
 end
 
 
