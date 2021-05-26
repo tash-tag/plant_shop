@@ -25,18 +25,17 @@ end
 # begin
  def validate_name(name)
   begin
-  name = name.strip #trim whitespace 
-  raise ArgumentError.new "Name must not be empty" 
+   name = name.strip #trim whitespace 
+   raise ArgumentError.new "Name must not be empty" 
   rescue ArgumentError => e
-  puts e #"Name must not be empty"
+   puts e "
   if name.empty?
    print "Enter valid name:"
    name = gets.chomp
   end
   end
-  # name
  end
-# end
+
 
 
 
@@ -47,16 +46,18 @@ end
 # end
 
 def questions(plant_selection)
-puts "What size plant do you want, small, medium or large?"
+ puts "What size plant do you want, small, medium or large?"
  print ">"
- plant_selection.answers[0] = gets.chomp
-puts "Do you want easy or challenging?"
-print ">"
-plant_selection.answers[1] = gets.chomp
-puts "Do you want a plant for high light or low light?"
-print ">"
-plant_selection.answers[2] = gets.chomp
+ plant_selection.answers[0] = gets.chomp 
+ puts "Do you want easy or challenging?"
+ print ">"
+ plant_selection.answers[1] = gets.chomp 
+ puts "Do you want a plant for high light or low light?"
+ print ">"
+ plant_selection.answers[2]= gets.chomp
+ 
 end
+
 
 
 #--------------------------------------------
