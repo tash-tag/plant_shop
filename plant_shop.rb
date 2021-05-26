@@ -1,11 +1,12 @@
-#When the program starts there will be a welcome message and it will ask for users name.
+
 require_relative 'plant_specks'
 require_relative 'plant_list'
+require_relative 'command_line_args'
 require 'colorize'
 require 'rspec'
 require 'tty-prompt'
 require 'artii'
-
+#When the program starts there will be a welcome message and it will ask for users name.
 def welcome
  puts "Welcome to the indoor plant shop.".colorize(:yellow)
  puts "What is your name?"
@@ -16,13 +17,25 @@ def welcome
  user_name
 end
 
-#specify an exception type
-def validate_name(name)
- name = name.strip 
- raise ArgumentError, "Name must not be empty" if name.empty?
- name
-end
+#raise an argument error
+begin
+ def validate_name(name)
+  name = name.strip #trim whitespace 
+  raise ArgumentError.new "Name must not be empty" 
+ rescue ArgumentError => e
+  puts e. #"Name must not be empty"
+  # if name.empty?
+  # name
+  end
+ end
 
+
+
+# begin
+#  welcome
+# rescue => 
+#  puts e."Name must not be empty"
+# end
 
 def questions(plant_selection)
 puts "What size plant do you want, small, medium or large?"
@@ -43,6 +56,10 @@ end
 system 'clear'
 
 name = welcome
+
+
+
+# menu
 
 plant_selection = PlantSpecks.new(name)
 
@@ -69,3 +86,8 @@ plant_selection.plant_suggest
 #  exit
 # end
 
+# end
+
+# def menu
+#  puts "Please select from the following options:", "1. Start with the main questions to find your perfect plant match", "2. Print out a list of all the plants available", "3. Exit the program"
+ # gets 

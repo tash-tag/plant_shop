@@ -1,7 +1,8 @@
 require_relative '../plant_specks'
-require_relative '../plant_difficulty'
-require_relative '../plant_light'
-require_relative '../plant_print'
+require_relative '../plant_shop'
+require_relative '../plant_list'
+
+
 
 # test of plant_print
 describe 'plant_print' do
