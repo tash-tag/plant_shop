@@ -1,11 +1,27 @@
 
+require_relative 'command_line_args'
 require_relative 'plant_specks'
 require_relative 'plant_list'
-require_relative 'command_line_args'
+
 require 'colorize'
 require 'rspec'
 require 'tty-prompt'
 require 'artii'
+
+# if ARGV.length > 0
+#  flag, *rest = ARGV #flag first, then splat operator will create array, then the rest.
+#  ARGV.clear
+#  case flag
+#  when '-help'
+#   puts "See further documentation in readme"
+#   exit
+#  when '-info'
+#   puts "This program is using Ruby version: #{RUBY_VERSION}"
+#  else 
+#   puts "Invalid argument, see readme for options"
+#  end
+# end
+
 #When the program starts there will be a welcome message and it will ask for users name.
 def welcome
  puts "Welcome to the indoor plant shop.".colorize(:yellow)
@@ -18,16 +34,21 @@ def welcome
 end
 
 #raise an argument error
-begin
+# begin
  def validate_name(name)
+  begin
   name = name.strip #trim whitespace 
   raise ArgumentError.new "Name must not be empty" 
- rescue ArgumentError => e
-  puts e. #"Name must not be empty"
-  # if name.empty?
-  # name
+  rescue ArgumentError => e
+  puts e #"Name must not be empty"
+  if name.empty?
+   print "Enter valid name:"
+   name = gets.chomp
   end
+  end
+  # name
  end
+# end
 
 
 
