@@ -3,7 +3,7 @@
 ## **Instructions:**
 - To run the program type in: 
 
-./run_app.sh 
+./run_app.sh ???
 
 Then when prompted with "Please type in the file name to start program" respond/type in test-group.txt
 
