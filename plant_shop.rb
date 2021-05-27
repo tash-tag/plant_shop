@@ -2,6 +2,7 @@
 require_relative 'command_line_args'
 require_relative 'plant_specks'
 require_relative 'plant_list'
+require_relative 'List'
 
 require 'colorize'
 require 'rspec'
@@ -36,7 +37,7 @@ end
 # end
  
 #asking the user what they want to do first 
-def menu(decision)
+def menu#(decision)
  puts "Please select from the following list:"
  puts "1. Start with the plant enquiry?" 
  puts "2. Print a copy of all of the plants and their prices?"
@@ -68,18 +69,22 @@ end
 #start of program
 #--------------------------------------------
 system 'clear'
-
 name = welcome
 
-menu
+name = gets.strip.downcase
 
-case gets.to_i
-when 1
- puts "Start with the plant enquiry?"
-when 2
- puts "Print a copy of all of the plants and their prices?"
-when 3
- puts "Quit"
+todo = List.new(name)
+
+loop du
+ menu
+ case gets.to_i
+ when 1
+  todo.enquiry 
+ when 2
+  todo.prices
+ when 3
+  Quit
+ end
 end
 
 plant_selection = PlantSpecks.new(name)
@@ -88,31 +93,12 @@ questions(plant_selection)
 
 plant_selection.plant_suggest
 
+
 plant_print = Plantlist.new
 
-plant_choice.plant_print
+# plant_choice.plant_print
 
 
 
 
-# name = gets.strip.downcase
 
-# todo = PlantSize.new(name)
-
-# loop do plant_specks
-# case gets.to_i
-# when 1 
-#  todo.size
-# when 2
-#  todo.easy
-# when 3
-#  todo.light
-# when 4
-#  exit
-# end
-
-# end
-
-# def menu
-#  puts "Please select from the following options:", "1. Start with the main questions to find your perfect plant match", "2. Print out a list of all the plants available", "3. Exit the program"
- # gets 
