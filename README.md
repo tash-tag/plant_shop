@@ -93,5 +93,12 @@ Following is a flow chart detailing the plan of the terminal app, loops can be s
 
 ![Flow Chart](./docs/FlowChart.png)
 
+Following are screen shots of some manual testing of the app, the first feature tested is the user name input, where the user is asked to type in their name, if they do, all is good, if they leave it blank, there is an error message asking them to enter their name. The second feature tested is when the user is asked to answer some questions about what requirements they have for their prefered plant, if they type in valid text all is good, but if they type in invalid text or leave it blank they won't receive a print out of the plant:
+
+![Manual_Testing](./docs/ManualTest.png)
+
+
+![Manual_Testing2](./docs/ManualTest2.png)
+
 Thanks for reading and please go ahead and enjoy using the Plant Shop app.
 
