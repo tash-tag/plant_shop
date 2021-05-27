@@ -1,7 +1,7 @@
 # T1A3 Terminal project
 
 ## **Link to github repo:**
-
+[Link to github](https://github.com/tash-tag/plant_shop)
 ## **STATEMENT OF PURPOSE**
 
 Plant Shop:
