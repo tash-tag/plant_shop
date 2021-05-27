@@ -18,7 +18,7 @@ def welcome
  print ">"
  user_name = gets.chomp()
  validate_name(user_name)
- puts ("Hello " + user_name + ", please answer some questions to find your perfect plant match.")
+ puts ("Hello " + user_name + ", I have a selection of plants for you, but first could you please give me some information so I can make a recommendation.")
  user_name
 end
 
@@ -74,22 +74,26 @@ name = welcome
 name = gets.strip.downcase
 
 todo = List.new(name)
+plant_selection = PlantSpecks.new(name)
 
-loop du
+loop do
  menu
  case gets.to_i
  when 1
-  todo.enquiry 
+  questions(plant_selection)
+  plants = plant_selection.plant_suggest
+  plant_selection.plant_print(plants)
  when 2
-  todo.prices
+  plants = Plantlist.new.plant_choice
+  plant_selection.plant_print(plants)
  when 3
-  Quit
+  exit
  end
 end
 
-plant_selection = PlantSpecks.new(name)
 
-questions(plant_selection)
+
+# questions(plant_selection)
 
 plant_selection.plant_suggest
 

@@ -11,14 +11,17 @@ class PlantSpecks
 # calling a plant selection to print to user
 def plant_suggest 
 object = Plantlist.new
-pp object.plant_choice.select {|hash| (hash.values & answers) == answers}
+plants = object.plant_choice.select {|hash| (hash.values & answers) == answers}
 
 end
 
 # calling the plant hash to print all plant names and prices
-def plant_print
- object = Plantlist.new
- p object.plant_choice.map {|hash| hash.values [3], [4]}.uniq
+def plant_print(plant_array)
+ # plants = plant_suggest
+ plant_array.map do |hash| 
+ puts "#{hash [:plant_name]} #{hash [:price]}"
+end
+ 
 
 end
 
