@@ -13,7 +13,7 @@ require 'artii'
 
 #When the program starts there will be a welcome message and it will ask for users name.
 def welcome
- puts "Welcome to the indoor plant shop." 
+ puts "Welcome to the indoor plant shop, we will endeavour to find the perfect plant match for you.".blue
  puts "What is your name?".yellow
  print ">"
  user_name = gets.chomp()
